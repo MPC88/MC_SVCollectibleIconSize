@@ -90,9 +90,9 @@ namespace MC_SVCollectibleIconSize
                 }
 
                 if (reset && configSteps.Value > 0)
-                    ___minimapIcon.transform.localScale /= (configStepSize.Value * configSteps.Value);
+                    ___minimapIcon.transform.localScale /= Mathf.Pow(configStepSize.Value,configSteps.Value);
                 else if (reset && configSteps.Value < 0)
-                    ___minimapIcon.transform.localScale *= (configStepSize.Value * Mathf.Abs(configSteps.Value));
+                    ___minimapIcon.transform.localScale *= Mathf.Pow(configStepSize.Value, Mathf.Abs(configSteps.Value));
             }
         }
 
@@ -101,9 +101,9 @@ namespace MC_SVCollectibleIconSize
         private static void Collectible_Start_Post(ref GameObject ___minimapIcon)
         {
             if (configSteps.Value < 0)
-                ___minimapIcon.transform.localScale /= (configStepSize.Value * Mathf.Abs(configSteps.Value));
+                ___minimapIcon.transform.localScale /= Mathf.Pow(configStepSize.Value, Mathf.Abs(configSteps.Value));
             else if (configSteps.Value > 0)
-                ___minimapIcon.transform.localScale *= (configStepSize.Value * configSteps.Value);
+                ___minimapIcon.transform.localScale *= Mathf.Pow(configStepSize.Value, configSteps.Value);
         }
     }
 
