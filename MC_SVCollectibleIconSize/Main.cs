@@ -11,7 +11,7 @@ namespace MC_SVCollectibleIconSize
     {
         public const string pluginGuid = "mc.starvalor.collectibleiconsize";
         public const string pluginName = "SV Collectible Icon Size";
-        public const string pluginVersion = "1.0.0";
+        public const string pluginVersion = "1.0.1";
 
         private static ConfigEntry<KeyCodeSubset> configInputInc;
         private static ConfigEntry<KeyCodeSubset> configInputDec;
